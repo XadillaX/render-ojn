@@ -1,7 +1,6 @@
 #ifndef NX_O2JAM_MUSICRENDERER_HPP
 #define NX_O2JAM_MUSICRENDERER_HPP
 
-#include <windows.h>
 #include <cmath>
 #include <iostream>
 #include "Music.hpp"
@@ -25,7 +24,7 @@ namespace Nx
 			int m_asyncProgress;
 
 			unsigned int m_elapsed;
-			LARGE_INTEGER m_timerFreq, m_timerStart;
+			timeval m_timerStart;
 			bool m_isTimerRunning;
 
 			void BeginTimer();

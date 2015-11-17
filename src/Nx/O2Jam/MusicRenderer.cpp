@@ -1,4 +1,5 @@
 #include "MusicRenderer.hpp"
+#include <sys/time.h>
 
 namespace Nx
 {
@@ -167,8 +168,7 @@ namespace Nx
 		void MusicRenderer::BeginTimer()
 		{
 			m_elapsed = 0;
-			QueryPerformanceFrequency(&m_timerFreq);
-			QueryPerformanceCounter(&m_timerStart);
+            gettimeofday(&m_timerStart, NULL);
 			m_isTimerRunning = true;
 		}
 
@@ -181,9 +181,10 @@ namespace Nx
 		{
 			if(m_isTimerRunning)
 			{
-				LARGE_INTEGER elapsed;
-				QueryPerformanceCounter(&elapsed);
-				m_elapsed = static_cast<unsigned int>((elapsed.QuadPart - m_timerStart.QuadPart) * 1000 / m_timerFreq.QuadPart);
+				timeval elapsed;
+                gettimeofday(&elapsed, NULL);
+				m_elapsed = static_cast<unsigned int>((elapsed.tv_sec - m_timerStart.tv_sec) * 1000.0f +
+                        (elapsed.tv_usec - m_timerStart.tv_usec) / 1000.0f);
 			}
 		}
 

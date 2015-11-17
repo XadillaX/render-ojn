@@ -6,6 +6,8 @@
 #include <fstream>
 #include <lame.h>
 #include <sndfile.h>
+#pragma comment(lib, "libmp3lame.a")
+#pragma comment(lib, "libsndfile.a")
 
 namespace Nx
 {

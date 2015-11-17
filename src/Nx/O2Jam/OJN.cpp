@@ -1,4 +1,5 @@
 #include "OJN.hpp"
+#include <sys/time.h>
 
 namespace Nx
 {
@@ -198,12 +199,10 @@ namespace Nx
 			float top = m_events.back().TimePos + 2000.0f;
 			float currentBPM = m_header.Tempo;
 
-			LARGE_INTEGER freq;
-			LARGE_INTEGER startTime;
 			unsigned int elapsed = 0, previous = 0;
 
-			QueryPerformanceFrequency(&freq);
-			QueryPerformanceCounter(&startTime);
+            timeval startTime;
+            gettimeofday(&startTime, NULL);
 
 			/*float refreshRate = 1024.0f / 48000.0f;
 			float totalCalls = (float)m_header.Duration[difficulty] / refreshRate;
@@ -288,9 +287,10 @@ namespace Nx
 					m_fmod->update();
 				}
 
-				LARGE_INTEGER elapsed_li;
-				QueryPerformanceCounter(&elapsed_li);
-				elapsed = static_cast<unsigned int>((elapsed_li.QuadPart - startTime.QuadPart) * 1000 / freq.QuadPart);
+                timeval endTime;
+                gettimeofday(&endTime, NULL);
+				elapsed = static_cast<unsigned int>((endTime.tv_sec - startTime.tv_sec) * 1000.0f +
+                    (endTime.tv_usec - startTime.tv_usec) / 1000.0f);
 			}
 		}
 

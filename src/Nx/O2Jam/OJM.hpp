@@ -1,7 +1,6 @@
 #ifndef NX_O2JAM_OJM_HPP
 #define NX_O2JAM_OJM_HPP
 
-#include <windows.h>
 #include <string>
 #include <vector>
 #include <fstream>

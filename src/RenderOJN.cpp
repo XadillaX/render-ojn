@@ -6,12 +6,14 @@
 #include <tag.h>
 #include <xiphcomment.h>
 #include <fileref.h>
+#pragma comment(lib, "libboost_program_options.a")
+#pragma comment(lib, "libtag.a")
 
 #include "Nx/IO.hpp"
 #include "Nx/Audio/WaveEncoder.hpp"
 #include "Nx/O2Jam/Music.hpp"
 #include "Nx/O2Jam/MusicRenderer.hpp"
-//#include "Nx/O2Jam/OJN.hpp"
+#include "Nx/O2Jam/OJN.hpp"
 
 using namespace Nx::IO;
 using namespace Nx::O2Jam;
@@ -31,7 +33,6 @@ static const std::string base64_chars =
              "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
              "abcdefghijklmnopqrstuvwxyz"
              "0123456789+/";
-
 
 static inline bool is_base64(unsigned char c) {
   return (isalnum(c) || (c == '+') || (c == '/'));

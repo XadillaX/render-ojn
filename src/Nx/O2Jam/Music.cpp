@@ -411,7 +411,14 @@ namespace Nx
 
 		bool Music::LoadSamples(bool stream)
 		{
-			std::fstream fs(m_header.OJMFile, std::ios::in | std::ios::binary);
+            std::string dir = m_path;
+            while(dir[dir.size() - 1] != '/' && dir[dir.size() - 1] != '\\')
+            {
+                dir = dir.substr(0, dir.size() - 1);
+            }
+            std::string ojm_path = dir + m_header.OJMFile;
+
+			std::fstream fs(ojm_path.c_str(), std::ios::in | std::ios::binary);
 
 			if(!fs.is_open())
 				return false;
