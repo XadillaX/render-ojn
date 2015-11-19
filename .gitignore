@@ -1,0 +1,7 @@
+*.mp3
+*.o
+*.tmp
+./libfmodex.dylib
+.DS_Store
+.ropeproject
+bin/*
