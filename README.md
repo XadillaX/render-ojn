@@ -44,9 +44,16 @@ Released: June 2012
 - Able to encode to MP3 with automatic ID3 tagging.
 - Keysounded notes might or might not be rendered properly in quick mode.
 
+## Compilation ##
+
+```
+$ make
+$ sudo make install
+```
+
 ## Usage ##
 
-Usage: ```RenderOJN [inputfile [options]]```
+Usage: ```ojn_renderer [inputfile [options]]```
 
 Rendering Options:
 
@@ -70,10 +77,10 @@ Misc. Options:
 Example:
 
 ```
-RenderOJN o2ma100.ojn --outfile BachAlive.mp3 --quality 2
-RenderOJN o2ma100.ojn --rendermode realtime --format wav
-RenderOJN o2ma100.ojn --play
-RenderOJN --help
+ojn_renderer o2ma100.ojn --outfile BachAlive.mp3 --quality 2
+ojn_renderer o2ma100.ojn --rendermode realtime --format wav
+ojn_renderer o2ma100.ojn --play
+ojn_renderer --help
 ```
 
 ## Dependencies ##
