@@ -1,4 +1,4 @@
-#include "OJN.hpp"
+#include "ojn.h"
 #include <sys/time.h>
 
 namespace Nx

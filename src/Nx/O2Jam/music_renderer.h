@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include <iostream>
-#include "Music.hpp"
+#include "music.h"
 
 namespace Nx
 {

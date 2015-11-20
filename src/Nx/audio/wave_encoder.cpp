@@ -1,4 +1,4 @@
-#include "WaveEncoder.hpp"
+#include "wave_encoder.h"
 
 namespace Nx
 {

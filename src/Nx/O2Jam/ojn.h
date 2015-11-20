@@ -1,7 +1,7 @@
 #ifndef NX_O2JAM_OJN_HPP
 #define NX_O2JAM_OJN_HPP
 
-#include "OJM.hpp"
+#include "ojm.h"
 
 namespace Nx
 {

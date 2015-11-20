@@ -52,10 +52,7 @@ flags = [
     '/Users/xadillax/.nvm/versions/io.js/v2.5.0/lib/node_modules/nan',
 
     # Includes
-    '-I', '/Users/xadillax/Workspace/cpp/render-ojn/include',
-    '-I', '/Users/xadillax/Workspace/cpp/render-ojn/include/fmodex',
-    '-I', '/Users/xadillax/Workspace/cpp/render-ojn/include/taglib',
-    '-I', '/Users/xadillax/Workspace/cpp/render-ojn/include/boost',
+    '-isystem', 'include/fmodex',
 
     # PRETENT I'M iojs 3.0
     # https://github.com/nodejs/nan/blob/v2.0.7/nan.h#L120

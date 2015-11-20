@@ -1,4 +1,4 @@
-#include "Music.hpp"
+#include "music.h"
 
 namespace Nx
 {
@@ -59,7 +59,7 @@ namespace Nx
 			fs.read((char *)&m_header.NewSongID, 4);
 			fs.read((char *)&m_header.FileSignature, 4);
 
-			if(m_header.FileSignature != 7236207 || m_header.NewSongID < 0 || m_header.NewSongID > 10000)
+			if(m_header.FileSignature != 7236207 || /** m_header.NewSongID < 0 || */ m_header.NewSongID > 10000)
 			{
 				fs.close();
 				return false;

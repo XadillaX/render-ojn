@@ -3,17 +3,15 @@
 #include <string>
 #include <boost/program_options.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include <tag.h>
-#include <xiphcomment.h>
-#include <fileref.h>
-#pragma comment(lib, "libboost_program_options.a")
-#pragma comment(lib, "libtag.a")
+#include <taglib/tag.h>
+#include <taglib/xiphcomment.h>
+#include <taglib/fileref.h>
 
-#include "Nx/IO.hpp"
-#include "Nx/Audio/WaveEncoder.hpp"
-#include "Nx/O2Jam/Music.hpp"
-#include "Nx/O2Jam/MusicRenderer.hpp"
-#include "Nx/O2Jam/OJN.hpp"
+#include "nx/io.h"
+#include "nx/audio/wave_encoder.h"
+#include "nx/o2jam/music.h"
+#include "nx/o2jam/music_renderer.h"
+#include "nx/o2jam/ojn.h"
 
 using namespace Nx::IO;
 using namespace Nx::O2Jam;
