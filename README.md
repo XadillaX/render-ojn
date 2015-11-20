@@ -6,9 +6,6 @@ Renders O2Jam OJN/OJM to MP3/WAV/OGG music file
 - **Forked by**: XadillaX <https://xcoder.in>
 - **Latest Version**: 0.9.0
 
-**IMPORTANT:**
-This project is no longer maintained. Use at your own risk.
-
 --------------------------------------------------------------------------------------------------
 
 This software is provided 'as-is', without any express or implied
