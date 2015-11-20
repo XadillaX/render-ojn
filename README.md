@@ -3,7 +3,8 @@ Renders O2Jam OJN/OJM to MP3/WAV/OGG music file
 
 - **Author**: Yana Nugraha
 - **Author Homepage**: http://djzmo.com
-- **Latest Version**: 0.8.2
+- **Forked by**: XadillaX <https://xcoder.in>
+- **Latest Version**: 0.9.0
 
 **IMPORTANT:**
 This project is no longer maintained. Use at your own risk.
@@ -28,6 +29,10 @@ See it in action: https://www.youtube.com/watch?v=snYnd_IvmbM
 - In quick mode, output quality might not be satisfying on keysounded music.
 
 ## Version History ##
+
+### v0.9.0
+Released: Nov 2015
+- Make it compilabled under OSX.
 
 ### v0.8.2
 Released: June 2012
