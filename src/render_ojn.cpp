@@ -182,9 +182,9 @@ int main(int argc, char **argv)
 {
 	std::cout << "\n================================\n";
 	std::cout << "RenderOJN\n";
-	std::cout << "version 0.8 beta\n";
-	std::cout << "http://djzmo.com/p/RenderOJN\n";
+	std::cout << "version 0.9 beta\n";
 	std::cout << "(C) 2012 - DJZMO\n";
+    std::cout << " *  Forked by XadillaX";
 	std::cout << "================================\n\n";
 
 	if(File::Exists("_render.tmp"))
