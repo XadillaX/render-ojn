@@ -15,9 +15,6 @@ build: build/wave_encoder.o build/file.o build/o2jam/music.o \
 		-lboost_program_options -lboost_date_time -ltag -lmp3lame -lsndfile \
 		-o bin/ojn_renderer
 
-echo-path:
-	@echo $(ROOT_DIR)
-
 build/wave_encoder.o: src/nx/audio/wave_encoder.cpp src/nx/audio/wave_encoder.h
 	$(CC) -c $(REAL_CFLAGS) $< -o $@
 
@@ -50,4 +47,4 @@ install:
 clean:
 	@rm -rf build/**/*.o
 
-.PHONY: build echo-pach
+.PHONY: build
